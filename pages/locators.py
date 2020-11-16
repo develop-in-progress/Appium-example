@@ -14,6 +14,4 @@ class Locators:
     SEARCH_FIELD_LANG = (By.ID, 'org.wikipedia:id/search_src_text')
     SEARCH_RESULT_LANG = (By.ID, 'org.wikipedia:id/localized_language_name')
     LANGUAGES = (By.ID, 'org.wikipedia:id/wiki_language_title')
-    # _BUTTON = (By.ID, 'org.wikipedia:id/fragment_onboarding_skip_button')
-    # _BUTTON = (By.ID, 'org.wikipedia:id/fragment_onboarding_skip_button')
-    # _BUTTON = (By.ID, 'org.wikipedia:id/fragment_onboarding_skip_button')
+

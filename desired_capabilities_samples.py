@@ -26,8 +26,4 @@ class DCSamples:
             "autoAcceptAlerts": "true"
         }
     }
-    app_hash = {
-        "appPackage": "org.wikipedia",
-        "appActivity": "org.wikipedia.settings.SettingsActivity"
-    }
-    # 'D:\\PyCharm\\Appium-example\\Wikipedia+v2.7.50334-r-2020-11-02.apk'
+

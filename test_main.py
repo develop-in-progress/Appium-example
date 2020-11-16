@@ -13,7 +13,7 @@ class TestSearchForm:
 
     def test_search_form(self):
         main_page = MainPage(self.driver)
-        # main_page.skip_familiarization()
+        main_page.skip_familiarization()
         main_page.tap_search()
         search_page = SearchPage(self.driver)
         search_page.input_search('Python')

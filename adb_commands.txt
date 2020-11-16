@@ -1,0 +1,7 @@
+commands for activity search:
+- adb --version
+- adb start-server
+- adb devices
+- adb shell pm list packages
+- adb shell pm list packages | grep "example"
+- adb shell dumpsys window windows | grep "example"

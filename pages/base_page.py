@@ -16,3 +16,15 @@ class BasePage:
 
     def quit(self):
         self.driver.quit()
+
+    def swipe_down(self):
+        self.driver.swipe(500, 500, 500, 1000, 400)  # start_x, start_y, end_x, end_y, duration
+
+    def swipe_up(self):
+        self.driver.swipe(500, 1000, 500, 500, 400)
+
+    def swipe_left(self):
+        self.driver.swipe(500, 500, 100, 500, 400)
+
+    def swipe_right(self):
+        self.driver.swipe(100, 500, 500, 500, 400)

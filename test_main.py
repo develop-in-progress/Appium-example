@@ -33,3 +33,4 @@ class TestSearchForm:
         settings_page.add_language('Українська')
         settings_page.check_language_presence('Українська')
         time.sleep(5)  # For visual confirm
+

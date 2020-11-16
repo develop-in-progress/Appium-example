@@ -5,22 +5,25 @@ app_path = os.path.join(str(pathlib.Path().absolute()), 'Wikipedia+v2.7.50334-r-
 
 
 class DCSamples:
-    desired_capabilities_virtual_pixel2 = {
-        'main': {
+    desired_capabilities_ = {
+        'Android': {
             "platformName": "Android",
-            "platformVersion": "11",
-            "deviceName": "Android Emulator",
+            "platformVersion": "10",
+            "deviceName": "EPHNW20525021513",
             "app": app_path,
             "appPackage": "org.wikipedia",
-            "appActivity": ".main.MainActivity"
+            "appActivity": ".main.MainActivity",
+            "autoGrantPermissions": "true",
+
         },
-        'settings': {
+        'iOS': {
             "platformName": "Android",
             "platformVersion": "11",
             "deviceName": "Android Emulator",
             "app": app_path,
             "appPackage": "org.wikipedia",
-            "appActivity": "org.wikipedia.settings.SettingsActivity"
+            "appActivity": "org.wikipedia.settings.SettingsActivity",
+            "autoAcceptAlerts": "true"
         }
     }
     app_hash = {

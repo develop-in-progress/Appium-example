@@ -9,7 +9,10 @@ class SettingsPage(BasePage):
 
     def add_language(self, language):
         self.driver.find_element(*Locators.CHANGE_LANG_BUTTON).click()
-        self.driver.find_element(*Locators.ADD_LANG_BUTTON).click()
+        lang_opt = self.driver.find_elements(*Locators.ADD_LANG_BUTTON)
+        for _ in lang_opt:
+            if 'ADD LANGUAGE' in _.text:
+                _.click()
         self.driver.find_element(*Locators.SEARCH_LANG_BUTTON).click()
         self.driver.find_element(*Locators.SEARCH_FIELD_LANG).send_keys(language)
         self.driver.find_element(*Locators.SEARCH_RESULT_LANG).click()

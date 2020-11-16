@@ -7,10 +7,10 @@ import time
 import pytest
 
 
-@pytest.mark.search
+@pytest.mark.for_fun
 class TestSearchForm:
     def setup(self):
-        desired_capabilities = DCSamples.desired_capabilities_virtual_pixel2['main']
+        desired_capabilities = DCSamples.desired_capabilities_['Android']
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=desired_capabilities)
 
     def teardown(self):
@@ -25,6 +25,7 @@ class TestSearchForm:
         search_page.verify_search_result('Python')
         time.sleep(5)  # For visual confirm
 
+    @pytest.mark.settings
     def test_settings(self):
         main_page = MainPage(self.driver)
         main_page.skip_familiarization()

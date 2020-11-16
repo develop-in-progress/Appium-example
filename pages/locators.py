@@ -9,7 +9,7 @@ class Locators:
     MORE_BUTTON = (By.ID, 'org.wikipedia:id/menu_icon')
     SETTINGS_BUTTON = (By.ID, 'org.wikipedia:id/main_drawer_settings_container')
     CHANGE_LANG_BUTTON = (By.XPATH, "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[2]/android.widget.RelativeLayout")
-    ADD_LANG_BUTTON = (By.XPATH, '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[3]/android.widget.TextView')
+    ADD_LANG_BUTTON = (By.ID, 'org.wikipedia:id/wiki_language_title')
     SEARCH_LANG_BUTTON = (By.ID, 'org.wikipedia:id/menu_search_language')
     SEARCH_FIELD_LANG = (By.ID, 'org.wikipedia:id/search_src_text')
     SEARCH_RESULT_LANG = (By.ID, 'org.wikipedia:id/localized_language_name')

@@ -1,3 +1,4 @@
+import os
 from appium import webdriver
 from pages.main_page import MainPage
 from pages.search_page import SearchPage
@@ -10,12 +11,16 @@ import pytest
 @pytest.mark.for_fun
 class TestSearchForm:
     def setup(self):
-        desired_capabilities = DCSamples.desired_capabilities_['Android']
-        self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=desired_capabilities)
+        # sauce_username = os.environ["SAUCE_USERNAME"]
+        # sauce_access_key = os.environ["SAUCE_ACCESS_KEY"]
+        remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
+        caps = DCSamples.desired_capabilities_['Android saucelab']
+        # self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
+        self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=caps)
 
     def teardown(self):
         self.driver.quit()
-
+    @pytest.mark.search
     def test_search_form(self):
         main_page = MainPage(self.driver)
         main_page.skip_familiarization()
@@ -34,4 +39,3 @@ class TestSearchForm:
         settings_page.add_language('Українська')
         settings_page.check_language_presence('Українська')
         time.sleep(5)  # For visual confirm
-

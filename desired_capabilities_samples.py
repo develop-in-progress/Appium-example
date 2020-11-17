@@ -9,13 +9,31 @@ class DCSamples:
         'Android': {
             "platformName": "Android",
             "platformVersion": "10",
-            "deviceName": "EPHNW20525021513",
+            "deviceName": "Android GoogleAPI Emulator",
             "app": app_path,
             "appPackage": "org.wikipedia",
             "appActivity": ".main.MainActivity",
             "autoGrantPermissions": "true",
+            'username': os.environ['SAUCE_USERNAME'],
+            'accessKey': os.environ['SAUCE_ACCESS_KEY']
+        },
+
+        'Android saucelab': {
+            "platformName": "Android",
+            "platformVersion": "10",
+            "deviceName": "Google Pixel 3 GoogleAPI Emulator",
+            'appiumVersion': '1.17.1',
+            "app": 'https://github.com/develop-in-progress/Appium-example/blob/main/Wikipedia%2Bv2.7.50334-r-2020-11-02.apk',
+            "appPackage": "org.wikipedia",
+            "appActivity": ".main.MainActivity",
+            "autoGrantPermissions": "true",
+            'username': os.environ['SAUCE_USERNAME'],
+            'accessKey': os.environ['SAUCE_ACCESS_KEY'],
+            "name": "first tests",
+            'remoteAppsCacheLimit': '0'
 
         },
+
         'iOS': {
             "platformName": "Android",
             "platformVersion": "11",

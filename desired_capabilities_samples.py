@@ -1,7 +1,7 @@
 import pathlib
 import os
 
-app_path = os.path.join(str(pathlib.Path().absolute()), 'Wikipedia+v2.7.50334-r-2020-11-02.apk')
+app_path = os.path.join(str(pathlib.Path().absolute()), 'Wikipedia.apk')
 
 
 class DCSamples:
@@ -21,17 +21,17 @@ class DCSamples:
         'Android saucelab': {
             "platformName": "Android",
             "platformVersion": "10",
-            "deviceName": "Google Pixel 3 GoogleAPI Emulator",
-            'appiumVersion': '1.17.1',
-            "app": 'https://github.com/develop-in-progress/Appium-example/blob/main/Wikipedia%2Bv2.7.50334-r-2020-11-02.apk',
+            "deviceName": "Android GoogleAPI Emulator",
+            "appiumVersion": "1.17.1",
+            "app": "https://github.com/develop-in-progress/Appium-example/blob/main/Wikipedia%2Bv2.7.50334-r-2020-11-02.apk",
             "appPackage": "org.wikipedia",
             "appActivity": ".main.MainActivity",
             "autoGrantPermissions": "true",
-            'username': os.environ['SAUCE_USERNAME'],
-            'accessKey': os.environ['SAUCE_ACCESS_KEY'],
+            "username": os.environ['SAUCE_USERNAME'],
+            "accessKey": os.environ['SAUCE_ACCESS_KEY'],
             "name": "first tests",
-            'remoteAppsCacheLimit': '0'
-
+            "deviceOrientation": "portrait",
+            "remoteAppsCacheLimit": "0"
         },
 
         'iOS': {

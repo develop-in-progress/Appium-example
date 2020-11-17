@@ -1,4 +1,3 @@
-import os
 from appium import webdriver
 from pages.main_page import MainPage
 from pages.search_page import SearchPage
@@ -12,7 +11,7 @@ import pytest
 class TestSearchForm:
     def setup(self):
         remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
-        caps = DCSamples.desired_capabilities_['Android saucelab']
+        caps = DCSamples.desired_capabilities_['iOS Saucelab']
         # self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
         self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=caps)
 

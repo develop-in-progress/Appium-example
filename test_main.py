@@ -11,8 +11,6 @@ import pytest
 @pytest.mark.for_fun
 class TestSearchForm:
     def setup(self):
-        # sauce_username = os.environ["SAUCE_USERNAME"]
-        # sauce_access_key = os.environ["SAUCE_ACCESS_KEY"]
         remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
         caps = DCSamples.desired_capabilities_['Android saucelab']
         # self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)

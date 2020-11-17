@@ -11,12 +11,13 @@ import pytest
 class TestSearchForm:
     def setup(self):
         remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
-        caps = DCSamples.desired_capabilities_['iOS Saucelab']
+        caps = DCSamples.desired_capabilities_['Android Saucelab']
         # self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
         self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=caps)
 
     def teardown(self):
         self.driver.quit()
+
     @pytest.mark.search
     def test_search_form(self):
         main_page = MainPage(self.driver)

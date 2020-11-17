@@ -8,14 +8,12 @@ class DCSamples:
     desired_capabilities_ = {
         'Android': {
             "platformName": "Android",
-            "platformVersion": "10",
+            "platformVersion": "11",
             "deviceName": "Android GoogleAPI Emulator",
             "app": app_path,
             "appPackage": "org.wikipedia",
             "appActivity": ".main.MainActivity",
-            "autoGrantPermissions": "true",
-            'username': os.environ['SAUCE_USERNAME'],
-            'accessKey': os.environ['SAUCE_ACCESS_KEY']
+            "autoGrantPermissions": "true"
         },
 
         'Android Saucelab': {
@@ -48,10 +46,10 @@ class DCSamples:
             "platformName": "iOS",
             "platformVersion": "13.0",
             "deviceName": "iPhone 11 Pro Simulator",
-            "app": "https://github.com/develop-in-progress/Appium-example/raw/saucelab_test/Wikipedia.apk",
+            "app": "https://github.com/develop-in-progress/Appium-example/raw/saucelab_test/Wikipedia.app.zip",
             "browserName": "",
-            "appPackage": "org.wikipedia",
-            "appActivity": "org.wikipedia.settings.SettingsActivity",
-            "autoAcceptAlerts": "true"
+            'username': os.environ['SAUCE_USERNAME'],
+            'accessKey': os.environ['SAUCE_ACCESS_KEY'],
+
         }
     }

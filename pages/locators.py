@@ -6,6 +6,7 @@ class Locators:
     SEARCH_INPUT = (By.ID, 'org.wikipedia:id/search_src_text')
     SEARCH_RESULT = (By.ID, 'org.wikipedia:id/page_list_item_title')
     SKIP_BUTTON = (By.ID, 'org.wikipedia:id/fragment_onboarding_skip_button')
+    NEXT_BUTTON = (By.ID, 'org.wikipedia:id/fragment_onboarding_forward_button')
     MORE_BUTTON = (By.ID, 'org.wikipedia:id/menu_icon')
     SETTINGS_BUTTON = (By.ID, 'org.wikipedia:id/main_drawer_settings_container')
     CHANGE_LANG_BUTTON = (By.ID, "android:id/title")

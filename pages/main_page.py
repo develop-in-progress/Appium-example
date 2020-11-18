@@ -7,5 +7,10 @@ class MainPage(BasePage):
         self.click_element(Locators.SEARCH_FIELD)
 
     def skip_familiarization(self):
-        skip_button = self.find_page_element(Locators.SKIP_BUTTON)
-        skip_button.click()
+        try:
+            skip_button = self.find_page_element(Locators.SKIP_BUTTON)
+            skip_button.click()
+            # next_button = self.find_page_element(Locators.NEXT_BUTTON)
+            # next_button.click() * 4
+        except:
+            raise Exception('Cant skip familiarization')

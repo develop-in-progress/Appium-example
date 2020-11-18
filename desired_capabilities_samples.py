@@ -50,7 +50,7 @@ class DCSamples:
             "browserName": "",
             'username': os.environ['SAUCE_USERNAME'],
             'accessKey': os.environ['SAUCE_ACCESS_KEY'],
-            "automationName": 'XCUITest'
+            "automationName": "XCUITest"
 
         }
     }

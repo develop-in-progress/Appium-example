@@ -13,4 +13,4 @@ class MainPage(BasePage):
             # next_button = self.find_page_element(Locators.NEXT_BUTTON)
             # next_button.click() * 4
         except:
-            raise Exception('Cant skip familiarization')
+            assert False, 'Cant skip familiarization'

@@ -7,11 +7,11 @@ import time
 import pytest
 
 
-@pytest.mark.for_fun
+@pytest.mark.parametrize('_caps', ["Android Saucelab", "iOS Saucelab"])
 class TestSearchForm:
     def setup(self):
         remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
-        caps = DCSamples.desired_capabilities_['iOS Saucelab']
+        caps = DCSamples.desired_capabilities_['_caps']
         # self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
         self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=caps)
 

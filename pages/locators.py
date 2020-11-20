@@ -15,7 +15,11 @@ class Locators: #  Locators for Android
     SEARCH_FIELD_LANG = (By.ID, 'org.wikipedia:id/search_src_text')
     SEARCH_RESULT_LANG = (By.ID, 'org.wikipedia:id/localized_language_name')
     LANGUAGES = (By.ID, 'org.wikipedia:id/wiki_language_title')
-
+    CARD_OPTIONS_BUTTON = (By.ID, 'org.wikipedia:id/view_list_card_header_menu')
+    CARD_HIDE_BUTTON = (By.ID, 'org.wikipedia:id/title')
+    CARD_HIDDEN_MASSAGE = (By.ID, 'org.wikipedia:id/snackbar_text')
+    CARD_UNDO_BUTTON = (By.ID, "org.wikipedia:id/snackbar_action")
+    CARD_HEADING = (By.ID, "org.wikipedia:id/view_card_header_title")
 # class Locators:  #  Locators for iOS
 #     SEARCH_FIELD = (By.ID, 'Search Wikipedia')
 #     SEARCH_INPUT = (By.CLASS_NAME, 'XCUIElementTypeSearchField')

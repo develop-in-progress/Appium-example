@@ -8,7 +8,7 @@ class SearchPage(BasePage):
         self.input(search_text, Locators.SEARCH_INPUT)
 
     def verify_search_result(self, search_text):
-        time.sleep(5)
+        self.wait_for_element_located_with_text(Locators.SEARCH_RESULT, search_text)
         result = self.find_page_elements(Locators.SEARCH_RESULT)
         try:
             result = [i.get_attribute('name') for i in result]

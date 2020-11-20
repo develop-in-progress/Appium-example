@@ -1,3 +1,7 @@
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+
+
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
@@ -31,3 +35,7 @@ class BasePage:
 
     def swipe_right(self):
         self.driver.swipe(100, 500, 500, 500, 400)
+
+    def wait_for_element_located_with_text(self, locator, text=None, wait_time=5):
+        wait = WebDriverWait(self.driver, wait_time)
+        return wait.until(EC.text_to_be_present_in_element(locator, text))

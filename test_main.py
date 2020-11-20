@@ -7,13 +7,13 @@ import time
 import pytest
 
 
-@pytest.mark.parametrize('_caps', ["Android Saucelab", "iOS Saucelab"])
+# @pytest.mark.parametrize('_caps', ["Android Saucelab", "iOS Saucelab"])
 class TestSearchForm:
     def setup(self):
-        remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
-        caps = DCSamples.desired_capabilities_['_caps']
-        # self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
-        self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=caps)
+        # remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
+        caps = DCSamples.desired_capabilities_['Android']
+        self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
+        # self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=caps)
 
     def teardown(self):
         self.driver.quit()
@@ -37,3 +37,24 @@ class TestSearchForm:
         settings_page.add_language('Українська')
         settings_page.check_language_presence('Українська')
         time.sleep(5)  # For visual confirm
+
+    @pytest.mark.hide_card
+    def test_hide_cart(self):
+        main_page = MainPage(self.driver)
+        main_page.skip_familiarization()
+        main_page.swipe_up()
+        main_page.click_card_options()
+        main_page.click_hide_card()
+        main_page.check_hidden_massage()
+
+    @pytest.mark.restore_card
+    def test_restore_cart(self):
+        main_page = MainPage(self.driver)
+        main_page.skip_familiarization()
+        main_page.swipe_up()
+        heading = main_page.remember_card_heading()
+        main_page.click_card_options()
+        main_page.click_hide_card()
+        main_page.check_hidden_massage()
+        main_page.click_undo_card_button()
+        main_page.check_card_is_restored(heading)

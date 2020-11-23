@@ -16,6 +16,7 @@ class DCSamples:
             "autoGrantPermissions": "true"
         },
 
+<<<<<<< HEAD
         # 'Android Saucelab': {
         #     "platformName": "Android",
         #     "platformVersion": "10",
@@ -67,4 +68,44 @@ class DCSamples:
         #     "automationName": "XCUITest"
         #
         # }
+=======
+        'Android Saucelab': {
+            "platformName": "Android",
+            "platformVersion": "10",
+            "deviceName": "Android GoogleAPI Emulator",
+            "appiumVersion": "1.17.1",
+            "app": "https://github.com/develop-in-progress/Appium-example/raw/saucelab_test/Wikipedia.apk",
+            "appPackage": "org.wikipedia",
+            "appActivity": ".main.MainActivity",
+            "autoGrantPermissions": "true",
+            "username": os.environ['SAUCE_USERNAME'],
+            "accessKey": os.environ['SAUCE_ACCESS_KEY'],
+            "name": "first tests",
+            "deviceOrientation": "portrait",
+        },
+
+        'iOS': {
+            "appiumVersion": "1.17.1",
+            "deviceOrientation": "portrait",
+            "platformName": "iOS",
+            "platformVersion": "13.0",
+            "deviceName": "iPhone 11 Pro Simulator",
+            "app": "https://github.com/develop-in-progress/Appium-example/raw/saucelab_test/Wikipedia.app.zip",
+            "browserName": "",
+            "automationName": "XCUITest"
+        },
+        'iOS Saucelab': {
+            "appiumVersion": "1.17.1",
+            "deviceOrientation": "portrait",
+            "platformName": "iOS",
+            "platformVersion": "13.0",
+            "deviceName": "iPhone 11 Pro Simulator",
+            "app": "https://github.com/develop-in-progress/Appium-example/raw/saucelab_test/Wikipedia.app.zip",
+            "browserName": "",
+            'username': os.environ['SAUCE_USERNAME'],
+            'accessKey': os.environ['SAUCE_ACCESS_KEY'],
+            "automationName": "XCUITest"
+
+        }
+>>>>>>> apple_testing
     }

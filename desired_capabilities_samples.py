@@ -16,7 +16,6 @@ class DCSamples:
             "autoGrantPermissions": "true"
         },
 
-<<<<<<< HEAD
         # 'Android Saucelab': {
         #     "platformName": "Android",
         #     "platformVersion": "10",
@@ -68,7 +67,7 @@ class DCSamples:
         #     "automationName": "XCUITest"
         #
         # }
-=======
+
         'Android Saucelab': {
             "platformName": "Android",
             "platformVersion": "10",
@@ -107,5 +106,5 @@ class DCSamples:
             "automationName": "XCUITest"
 
         }
->>>>>>> apple_testing
+
     }

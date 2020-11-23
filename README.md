@@ -14,7 +14,7 @@
     ##### `pytest`
     Смена эмулятора на iOS
     ##### `pytest --platform=ios_emulator_local`
-    Выполнение удаленно на saucelabs для Android [нужно прописать имя и пароль](https://wiki.saucelabs.com/display/DOCS/Best+Practice%3A+Use+Environment+Variables+for+Authentication+Credentials)
-    ##### `>pytest --platform=android_saucelab_emulator`
+    Выполнение удаленно на saucelabs для Android [Нужно прописать имя и ключ в переменные окружения](https://wiki.saucelabs.com/display/DOCS/Best+Practice%3A+Use+Environment+Variables+for+Authentication+Credentials)
+    ##### `pytest --platform=android_saucelab_emulator`
     Выполнение удаленно на saucelabs для iOS
     ##### `pytest --platform=ios_saucelab_emulator`

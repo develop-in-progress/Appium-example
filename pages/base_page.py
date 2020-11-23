@@ -1,17 +1,22 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from pages.locators import AndroidLocators
+from pages.locators import AndroidLocators, iOSLocators
 
 
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.driver.implicitly_wait(5)
+        self.driver.implicitly_wait(10)
 
     def get_locator(self, locator):
         if self.driver.capabilities.get('platformName') == 'Android':
             locator = AndroidLocators.locators[locator]
             return locator
+        elif self.driver.capabilities.get('platformName') == 'iOS':
+            locator = iOSLocators.locators[locator]
+            return locator
+        else:
+            raise Exception(f'Invalid locator: {locator}')
 
     def find_page_element(self, locator):
         return self.driver.find_element(*locator)

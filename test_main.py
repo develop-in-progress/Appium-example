@@ -8,7 +8,7 @@ import pytest
 
 
 # @pytest.mark.parametrize('_caps', ["Android Saucelab", "iOS Saucelab"])
-class TestSearchForm:
+class TestBase:
     def setup(self):
         # remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
         caps = DCSamples.desired_capabilities_['Android Emulator local']

@@ -40,9 +40,5 @@ class AndroidLocators:  # Locators for Android
 #     LANGUAGES = (By.ID, 'org.wikipedia:id/wiki_language_title')
 
 
-def get_locator(self, locator):
-    if self.driver.capabilities.get('platformName') == 'Android':
-        locator = AndroidLocators[locator]
-        return locator
 
-print(get_locator('SEARCH_RESULT'))
+

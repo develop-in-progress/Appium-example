@@ -10,7 +10,7 @@ class BasePage:
 
     def get_locator(self, locator):
         if self.driver.capabilities.get('platformName') == 'Android':
-            locator = AndroidLocators[locator]
+            locator = AndroidLocators.locators[locator]
             return locator
 
     def find_page_element(self, locator):

@@ -7,14 +7,15 @@ import time
 import pytest
 
 
-# @pytest.mark.parametrize('_caps', ["Android Saucelab", "iOS Saucelab"])
 class TestBase:
-    def setup(self):
-        # remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
-        caps = DCSamples.desired_capabilities_['Android Emulator local']
-
-        self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
-        # self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=caps)
+    @pytest.fixture(scope="function", autouse=True)
+    def setup(self, platform):
+        caps = DCSamples.desired_capabilities_[platform]
+        if 'sauce' in platform:
+            self.driver = webdriver.Remote(command_executor="https://ondemand.saucelabs.com:443/wd/hub",
+                                           desired_capabilities=caps)
+        else:
+            self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
 
     def teardown(self):
         self.driver.quit()
@@ -39,7 +40,6 @@ class TestBase:
         settings_page.check_language_presence('Українська')
         time.sleep(5)  # For visual confirm
 
-
     @pytest.mark.hide_card
     def test_hide_cart(self):
         main_page = MainPage(self.driver)
@@ -60,4 +60,3 @@ class TestBase:
         main_page.check_hidden_massage()
         main_page.click_undo_card_button()
         main_page.check_card_is_restored(heading)
-

@@ -24,12 +24,12 @@ class AndroidLocators:  # Locators for Android
     )
 
 
-class iOSLocators:  # Locators for Android
+class iOSLocators:  # Locators for iOS
     locators = dict(
         SEARCH_FIELD=(By.XPATH, '//XCUIElementTypeSearchField[@name="Search Wikipedia"]'),
         SEARCH_INPUT=(By.CLASS_NAME, 'XCUIElementTypeSearchField'),
         SEARCH_RESULT=(By.CLASS_NAME, 'XCUIElementTypeStaticText'),
-        SKIP_BUTTON=(By.XPATH, '//XCUIElementTypeStaticText[@name="Skip"]'),
+        SKIP_BUTTON=(By.XPATH, '//XCUIElementTypeButton[@name="Skip"]'),
         NEXT_BUTTON=(By.XPATH, '//XCUIElementTypeStaticText[@name="Next"]'),
         MORE_BUTTON=(By.ID, ''),
         SETTINGS_BUTTON=(By.ID, ''),

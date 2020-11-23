@@ -1,6 +1,5 @@
 from pages.base_page import *
 from pages.locators import Locators
-import time
 
 
 class MainPage(BasePage):
@@ -14,9 +13,6 @@ class MainPage(BasePage):
             # next_button = self.find_page_element(Locators.NEXT_BUTTON)
             # next_button.click() * 4
         except:
-<<<<<<< HEAD
-            raise Exception('Cant skip familiarization')
-=======
             assert False, 'Cant skip familiarization'
 
     def click_card_options(self):
@@ -44,4 +40,4 @@ class MainPage(BasePage):
         second_heading = second_heading.text
         assert heading in second_heading, \
         f'"{heading}" is not shown in heading, expected "{heading}" to be in "{second_heading}"'
->>>>>>> apple_testing
+

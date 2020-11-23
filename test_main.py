@@ -11,11 +11,8 @@ import pytest
 class TestSearchForm:
     def setup(self):
         # remote_url = "https://ondemand.saucelabs.com:443/wd/hub"
-<<<<<<< HEAD
-        caps = DCSamples.desired_capabilities_['iOS']
-=======
-        caps = DCSamples.desired_capabilities_['Android']
->>>>>>> apple_testing
+        caps = DCSamples.desired_capabilities_['Android Emulator local']
+
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities=caps)
         # self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=caps)
 
@@ -41,8 +38,7 @@ class TestSearchForm:
         settings_page.add_language('Українська')
         settings_page.check_language_presence('Українська')
         time.sleep(5)  # For visual confirm
-<<<<<<< HEAD
-=======
+
 
     @pytest.mark.hide_card
     def test_hide_cart(self):
@@ -64,4 +60,4 @@ class TestSearchForm:
         main_page.check_hidden_massage()
         main_page.click_undo_card_button()
         main_page.check_card_is_restored(heading)
->>>>>>> apple_testing
+

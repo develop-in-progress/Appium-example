@@ -6,7 +6,7 @@ app_path = os.path.join(str(pathlib.Path().absolute()), 'Wikipedia.apk')
 
 class DCSamples:
     desired_capabilities_ = {
-        'Android': {
+        'Android Emulator local': {
             "platformName": "Android",
             "platformVersion": "11",
             "deviceName": "Android GoogleAPI Emulator",
